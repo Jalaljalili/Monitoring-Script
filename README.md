@@ -16,9 +16,8 @@ This script searches for a specific word in a log file and counts the number of 
 # Example
 
 If you want to search for the word "error" in the log file /var/log/syslog, you would replace log_file_path = "/path/to/logfile.log" with log_file_path = "/var/log/syslog", and search_term = "error" would be already set.
-# License
 
-This script is released under the MIT License. Feel free to use, modify, and distribute it as you wish.
+
 
 
 # Host Info Bash Script
