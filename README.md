@@ -21,6 +21,48 @@ If you want to search for the word "error" in the log file /var/log/syslog, you 
 This script is released under the MIT License. Feel free to use, modify, and distribute it as you wish.
 
 
+# Host Info Bash Script
+
+This bash script outputs various information about the host, including memory usage, CPU usage, time zone, host IP, disk size, kernel version, total memory, total CPU, and distribution version.
+
+## Requirements
+
+- Bash
+
+## Usage
+
+1. Save the script to a file, for example `host_info.sh`.
+2. Open a terminal and navigate to the directory where the script is saved.
+3. Make the script executable by running `chmod +x host_info.sh`.
+4. Run the script by typing `./host_info.sh` in your terminal.
+5. The script will output a table with the requested information.
+
+## Table Columns
+
+The output table has the following columns:
+
+- Memory Usage: The current memory usage of the system.
+- CPU Usage: The current CPU usage of the system.
+- Time Zone: The time zone of the system.
+- Host IP: The IP address of the host.
+- Disk Size: The size of the disk where the root directory is mounted.
+- Kernel Version: The version of the Linux kernel.
+- Total Memory: The total amount of physical memory installed in the system.
+- Total CPU: The total number of CPU cores in the system.
+- Distribute Version: The version of the Linux distribution.
+
+
++----------------+----------------+----------------+-------------+----------------+----------------+--------------+----------+-------------------+
+| Memory Usage   | CPU Usage      | Time Zone      | Host IP     | Disk Size      | Kernel Version | Total Memory | Total CPU| Distribute Version|
++----------------+----------------+----------------+-------------+----------------+----------------+--------------+----------+-------------------+
+| 12.3% (1.23 GB)|  5.6%          | America/New_York| 192.168.1.5 | 250.0 GB       | 5.4.0-91-generic| 16.0 GB      | 4        | Ubuntu 20.04.1 LTS|
++----------------+----------------+----------------+-------------+----------------+----------------+--------------+----------+-------------------+
+
+## License
+
+This script is released under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute it as you wish.
+
+
 # Size_file
 Finding file by Size
 
