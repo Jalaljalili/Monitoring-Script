@@ -68,3 +68,33 @@ Finding file by Size
 ```bash
  find / -type f -size +700M -exec ls -lh {} \; 2> /dev/null | awk '{ print $NF ": " $5 }' | sort -nk 2,2
  ```
+
+
+# Find and Replace Script
+
+This is a shell script that finds a specific word in multiple files and replaces it with another word.
+
+## Usage
+
+1. Open a terminal and navigate to the directory that contains the files you want to search.
+
+2. Run the script using the following command:
+
+```shell
+sh find_replace.sh
+```
+
+3. Enter the word you want to find when prompted.
+
+4. Enter the word you want to replace it with when prompted.
+
+5. The script will then search for all files that contain the word and replace it with the new word.
+
+6. Once the script is finished, it will output a message to indicate that it is done.
+
+## Notes
+
+- This script only replaces exact matches of the word. If you want to replace partial matches or case-insensitive matches, you will need to modify the `grep` and `sed` commands accordingly.
+
+- Make sure to back up your files before running this script, just in case something goes wrong.
+
