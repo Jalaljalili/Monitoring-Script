@@ -98,3 +98,24 @@ sh find_replace.sh
 
 - Make sure to back up your files before running this script, just in case something goes wrong.
 
+# Ffmpeg Log Monitoring Script
+
+This shell script monitors the logs of multiple FFmpeg services and restarts any service whose FPS falls below a certain threshold. The script extracts the service name from the log file name.
+
+1. The script now defines the directory where the logs are located using the LOG_DIR variable.
+
+2. Inside the loop, the script uses the find command to get a list of all log files with the .log extension in the log directory.
+
+3. The script gets the latest line from the log file as before.
+
+4. The script extracts the fps value from the line as before.
+
+5. If the fps value is less than 22, the script extracts the service name from the log file name using the basename and sed commands. The sed command uses a regular expression to remove the hyphen and anything that comes after it in the log file name.
+
+6. The script restarts the service using the extracted service name.
+
+7. The script logs the restart event to a log file as before.
+
+Note that the regular expression used in the sed command assumes that the log file name follows the pattern servicename.log. If your log file names have a different pattern, you may need to adjust the regular expression accordingly.
+
+The script will run continuously, checking the logs every minute. If the FPS of any service falls below the threshold, the script will restart the service and log the restart event to a file.
