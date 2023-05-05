@@ -116,6 +116,12 @@ This shell script monitors the logs of multiple FFmpeg services and restarts any
 
 7. The script logs the restart event to a log file as before.
 
+## Usage
+``` bash
+chmod +x ffmpeg-log-monitor.sh
+./ffmpeg-log-monitor.sh
+```
+
 Note that the regular expression used in the sed command assumes that the log file name follows the pattern servicename.log. If your log file names have a different pattern, you may need to adjust the regular expression accordingly.
 
 The script will run continuously, checking the logs every minute. If the FPS of any service falls below the threshold, the script will restart the service and log the restart event to a file.
