@@ -125,3 +125,34 @@ chmod +x ffmpeg-log-monitor.sh
 Note that the regular expression used in the sed command assumes that the log file name follows the pattern servicename.log. If your log file names have a different pattern, you may need to adjust the regular expression accordingly.
 
 The script will run continuously, checking the logs every minute. If the FPS of any service falls below the threshold, the script will restart the service and log the restart event to a file.
+
+# Log Monitoring and Service Restart Script
+
+This bash script monitors log files in the `/root/log/` directory for occurrences of the phrase "Invalid data". If the count of occurrences exceeds 20 for any log file, it automatically restarts the corresponding service.
+
+## Requirements
+
+- Bash
+- Systemd
+
+## Usage
+
+1. Save the script to a file, for example `log-monitor.sh`.
+2. Set the correct permissions to make the script executable:
+   ```bash
+   chmod +x log-monitor.sh
+
+1. Customize the script if necessary:
+
+    - Update the `LOG_DIR` variable to match the directory where your log files are located.
+
+2. Run the script:
+```bash
+./log-monitor.sh
+```
+The script will loop through all log files in the specified directory, count the occurrences of "Invalid data", and restart the corresponding service if the count exceeds 20.
+
+## Notes
+
+- Make sure to update the `LOG_DIR` variable in the script to the actual directory path where your log files are located.
+- Ensure that the service names match the log file names for the script to restart the correct services.
