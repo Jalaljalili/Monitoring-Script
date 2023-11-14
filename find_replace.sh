@@ -12,7 +12,7 @@ files=$(grep -l -r "$find_word" ./*)
 # Loop through each file and replace the word with the new word
 for file in $files
 do
-  sed -i "s/$find_word/$replace_word/g" "$file"
+  sed -i "s|$find_word|$replace_word|g" "$file"
 done
 
 echo "Done!"
