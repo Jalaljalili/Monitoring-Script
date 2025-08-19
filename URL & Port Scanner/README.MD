@@ -39,3 +39,4 @@ python script.py
 
 * Running this script against external servers may require permission.
 
+# TLS Check Version
