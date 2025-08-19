@@ -40,3 +40,8 @@ python script.py
 * Running this script against external servers may require permission.
 
 # TLS Check Version
+
+* Reads a list of IP addresses from ip.txt.
+* Connects to each IP on port 443 (HTTPS).
+* Checks which TLS versions (SSLv3, TLSv1.0, v1.1, v1.2, v1.3) are supported.
+* Prints or saves the results.
