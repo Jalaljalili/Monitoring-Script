@@ -58,7 +58,7 @@ ulimit -n 65535
 Or reduce concurrency inside the script.
 
 ## 📊 Example Output
-IP          	Port	Status	TLS Versions Supported
+IP          	Port	Status	TLS Versions Supported <br>
 192.168.88.1	443	    OPEN	TLSv1.2, TLSv1.3
 192.168.88.2	443	    CLOSED	—
 192.168.88.3	8443	OPEN	TLSv1.0, TLSv1.1, TLSv1.2
