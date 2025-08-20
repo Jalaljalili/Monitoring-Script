@@ -41,7 +41,7 @@ pip install cryptography
 
 ##  ⚙️ Usage
 Add your target IPs to ip.txt (one per line):
-
+<br>
 ```bash
 192.168.1.0/24
 192.168.5.0/27
@@ -58,10 +58,12 @@ ulimit -n 65535
 Or reduce concurrency inside the script.
 
 ## 📊 Example Output
-IP          	Port	Status	TLS Versions Supported <br>
-192.168.88.1	443	    OPEN	TLSv1.2, TLSv1.3 <br>
-192.168.88.2	443	    CLOSED	— <br>
-192.168.88.3	8443	OPEN	TLSv1.0, TLSv1.1, TLSv1.2 <br>
+| IP           | Port | Status | TLS Versions Supported    |
+| ------------ | ---- | ------ | ------------------------- |
+| 192.168.1.1  | 443  | OPEN   | TLSv1.2, TLSv1.3          |
+| 192.168.1.2  | 443  | CLOSED | —                         |
+| 192.168.3.3 |  8443 | OPEN   | TLSv1.0, TLSv1.1, TLSv1.2 |
+
 
 ## ⚖️ Disclaimer
 This tool is intended for security testing and auditing on networks you own or have explicit permission to scan.
